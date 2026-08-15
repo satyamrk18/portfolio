@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+import dropArrow from "./../images/down-arrow.png";
+import off from "./../images/on-off-button.png";
+import flow from "./../images/version-control.png";
+import volume from "./../images/volume-up.png";
 function NavBar() {
   const [dateTime, setDateTime] = useState(new Date());
   useEffect(() => {
@@ -30,7 +34,12 @@ function NavBar() {
           hour12: false,
         })}
       </h2>
-      <h2 className="text-white">dunctionality</h2>
+      <div className="border-white-2 flex items-center gap-5">
+        <img src={flow} className="h-[17px]" />
+        <img src={volume} className="h-[17px]" />
+        <img src={off} className="h-[15px]" />
+        <img src={dropArrow} className="h-[20px]" />
+      </div>
     </nav>
   );
 }
